@@ -1,5 +1,6 @@
+
+import React, { useState } from 'react';
 import { Button } from '@material-ui/core';
-import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { incrementCountAC, resetCountAC } from '../../bll/counterReduser';
 import { AppStateType } from '../../bll/store';
@@ -12,7 +13,7 @@ export const Counter = () => {
     const value = useSelector<AppStateType, number>(state => state.counter.value);
     const startValue = useSelector<AppStateType, number>(state => state.counter.startValue);
     const maxValue = useSelector<AppStateType, number>(state => state.counter.maxValue);
-  
+    const [etiteMode] = useState(false)
 
 
     const onIncrement = () => {
@@ -30,13 +31,15 @@ export const Counter = () => {
         <div className={style.container}>
             <span className={style.display}>{value}</span>
             <div className={style.btn} >
-{condition?
-            <div className={style.error}>Incorrect Value!</div> :''}
+                {condition ?
+                    <div className={style.error}>Incorrect Value!</div> : ''}
 
-                <Button onClick={onIncrement} variant="contained" color='primary' size='small' >
+                <Button onClick={onIncrement} variant="contained" color='primary' size='small'
+                 disabled={etiteMode || value === maxValue} >
                     Inc </Button>
-                <Button onClick={onReset} variant="contained" color='primary' size='small'>
-                     
+                <Button onClick={onReset} variant="contained" color='primary' size='small'
+                disabled={etiteMode || value === startValue} >
+
                     Reset </Button>
             </div >
         </div >

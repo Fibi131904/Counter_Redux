@@ -23,9 +23,9 @@ export const SettingCount = () => {
         dispatch(setValuesAC())
     }
     const condition = maxValue < 0
-    || startValue < 0
-    || startValue > maxValue
-    || maxValue === startValue
+        || startValue < 0
+        || startValue > maxValue
+        || maxValue === startValue
 
     return (
         <div className={style.container}>
@@ -40,10 +40,12 @@ export const SettingCount = () => {
                 </div>
             </div>
 
+
             <div className={style.btn}>
                 <Button disabled={startValue === maxValue || maxValue === 0 || condition} onClick={onClickSetValues} variant="contained" color='primary' size='small' >
                     Set </Button>
             </div>
+
         </div >
     )
 }
