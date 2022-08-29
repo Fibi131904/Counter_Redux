@@ -1,9 +1,9 @@
+h1 {
+    text-align: center;
+}
+
 .appContainer {
     display: flex;
-    justify-content:  center;
-    margin: 50px;
-   
-
-   
-
+    flex-direction: row-reverse;
+    justify-content: center;
 }

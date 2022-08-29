@@ -7,10 +7,14 @@ import style from './App.module.css'
 
 function App() {
   return (
+    <>
+    <h1>Counter</h1>
    <div className={style.appContainer}>
+   
     <Counter/>
     <SettingCount/>
     </div>
+    </>
   );
 }
 
