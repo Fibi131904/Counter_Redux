@@ -1,9 +1,22 @@
-h1 {
-    text-align: center;
+.App {
+    background-image: linear-gradient(#d0e7c3 50%, #aef399 90%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.title {
+    margin: 50px;
+    color: rgb(57, 23, 206);
+    letter-spacing: 2em;
+    border-bottom: 2px solid maroon;
 }
 
 .appContainer {
     display: flex;
     flex-direction: row-reverse;
     justify-content: center;
+    align-items: center;
 }

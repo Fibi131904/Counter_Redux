@@ -33,12 +33,11 @@ export const Counter = () => {
             <div className={style.btn} >
                 {condition ?
                     <div className={style.error}>Incorrect Value!</div> : ''}
-
                 <Button onClick={onIncrement} variant="contained" color='primary' size='small'
-                 disabled={etiteMode || value === maxValue} >
+                    disabled={etiteMode || value === maxValue} >
                     Inc </Button>
                 <Button onClick={onReset} variant="contained" color='primary' size='small'
-                disabled={etiteMode || value === startValue} >
+                    disabled={etiteMode || value === startValue} >
 
                     Reset </Button>
             </div >
